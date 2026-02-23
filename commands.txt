@@ -1,0 +1,3 @@
+ - [ npm run cy:open ] => [ “cy:open”: ”cypress open” ] => [ npx cypress open ] => roda com interface gráfica.
+
+ - [ npm run test ] => [ “test”: ”cypress run”  ]=> [ npx cypress run ] => sem interface gráfica (modo headless).

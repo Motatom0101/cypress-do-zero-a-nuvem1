@@ -12,13 +12,13 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   // 2º caso teste: Preenche os campos obrigatórios e envia o formulário
   it('preenche os campos obrigatórios e envia o formulário', () => {
-    const longText = 'Lorem ipsum dolor sit amet!'.repeat(20)
+    const longText = 'Lorem ipsum dolor sit amet!'.repeat(20) // Variável com texto longo para preencher o campo de texto
 
     cy.get('#firstName').type('Tiago')
     cy.get('#lastName').type('Mota')
     cy.get('#email').type('123@hotmail.com')
     cy.get('#phone').type('1234567890')
-    cy.get('#open-text-area').type(longText, { delay: 0 })
+    cy.get('#open-text-area').type(longText, { delay: 0 }) // Uso da variável e do delay para preencher rapido
     cy.get('button[type="submit"]').click()
 
     cy.get('.success').should('be.visible')
